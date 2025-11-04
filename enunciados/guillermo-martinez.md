@@ -9,6 +9,12 @@ System.out.println("Dia " + dia + " - " + hora + ":00h ");
 
 ¿Qué observas en este código?
 Las variables dia y hora no están definidas en el fragmento de código mostrado. Si no se han declarado previamente, el programa generará un error de compilación
+La pregunta corregida seria asi:
+
+int dia = 3;
+int hora = 9;
+
+System.out.printf("Día %d - %02d:00h%n", dia, hora);
 ---
 
 ## Pregunta 2
@@ -24,6 +30,20 @@ final String VENTANA_ABIERTA_LUZ_ENCENDIDA = ":[*]:";
 ¿Qué observas en este código?
 En Java, las constantes suelen declararse como public static final, especialmente si se van a usar en varias partes del programa.
 Ejemplo: public static final String VENTANA_CERRADA = ":[ ]:";
+La pregunta corregida seria asi:
+
+public class Ventana {
+    public static final String VENTANA_CERRADA = ":[ ]:";
+    public static final String VENTANA_ABIERTA_LUZ_APAGADA = ":[º]:";
+    public static final String VENTANA_ABIERTA_LUZ_ENCENDIDA = ":[*]:";
+
+    public static void main(String[] args) {
+        System.out.println("Estado de la ventana:");
+        System.out.println(VENTANA_CERRADA);
+        System.out.println(VENTANA_ABIERTA_LUZ_APAGADA);
+        System.out.println(VENTANA_ABIERTA_LUZ_ENCENDIDA);
+    }
+}
 
 ---
 
@@ -40,6 +60,12 @@ Obserbo dos problemas:
 1: Uso de concatenación dentro de bucles: Cada vez que se usa fila += ... en un bucle, se crea una nueva cadena (porque los String en Java son inmutables).
 En casos de muchas iteraciones, puede afectar el rendimiento.
 2:Legibilidad del código: Si se omiten las llaves { }, puede causar confusión si se agrega otra instrucción después del if.
+La pregunta corregida seria asi:
+
+if (i < lado - 1) {
+    fila += ":";
+}
+
 ---
 
 ## Pregunta 4
@@ -73,6 +99,17 @@ while (dia <= DIAS) {
     dia++; // 
 }
 2:Reinicialización de variables: Es correcto que hora se reinicie a 0 en cada día, pero hay que asegurarse de no declarar dia dentro del bucle.
+La pregunta corregida seria asi:
+
+while (dia <= DIAS) {
+    int consumoDia = 0;
+    int hora = 0;
+    while (hora < HORAS) {
+        hora++;
+    }
+    dia++;
+}
+
 ---
 
 ## Pregunta 5
@@ -87,3 +124,6 @@ System.out.print(habitacion == 3 ? COLUMNA_CENTRAL: "");
 En este caso sigo obserbando dos problemas:
 1:Dependencia de variables externas: Habria que asegurarse de que la variable habitacion y la constante COLUMNA_CENTRAL estén declaradas e inicializadas antes de usar esta línea, o el código no compilará.
 2:Salida sin salto de línea: System.out.print() no agrega salto de línea al final. Si se desea que el resultado aparezca en una nueva línea, se debe usar System.out.println().
+La pregunta corregida seria asi:
+
+System.out.print(habitacion == 3 ? COLUMNA_CENTRAL : "");
