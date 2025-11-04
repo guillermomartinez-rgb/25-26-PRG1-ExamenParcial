@@ -59,7 +59,20 @@ while (dia <= DIAS) {
 ```
 
 ¿Qué observas en este código?
-
+En este caso tambien obserbo dos probemas:
+1:Incremento de la variable dia: En el fragmento mostrado no aparece dia++.
+Si no se incrementa dia dentro del bucle, el programa quedará en un bucle infinito.
+La solucion a este problema seria: 
+while (dia <= DIAS) {
+    int consumoDia = 0;
+    int hora = 0;
+    while (hora < HORAS) {
+        // ...
+        hora++;
+    }
+    dia++; // 
+}
+2:Reinicialización de variables: Es correcto que hora se reinicie a 0 en cada día, pero hay que asegurarse de no declarar dia dentro del bucle.
 ---
 
 ## Pregunta 5
