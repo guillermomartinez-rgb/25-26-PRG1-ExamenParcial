@@ -22,6 +22,8 @@ final String VENTANA_ABIERTA_LUZ_ENCENDIDA = ":[*]:";
 ```
 
 ¿Qué observas en este código?
+En Java, las constantes suelen declararse como public static final, especialmente si se van a usar en varias partes del programa.
+Ejemplo: public static final String VENTANA_CERRADA = ":[ ]:";
 
 ---
 
