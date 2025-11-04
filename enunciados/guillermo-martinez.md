@@ -84,3 +84,6 @@ System.out.print(habitacion == 3 ? COLUMNA_CENTRAL: "");
 ```
 
 ¿Qué observas en este código?
+En este caso sigo obserbando dos problemas:
+1:Dependencia de variables externas: Habria que asegurarse de que la variable habitacion y la constante COLUMNA_CENTRAL estén declaradas e inicializadas antes de usar esta línea, o el código no compilará.
+2:Salida sin salto de línea: System.out.print() no agrega salto de línea al final. Si se desea que el resultado aparezca en una nueva línea, se debe usar System.out.println().
