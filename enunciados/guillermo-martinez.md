@@ -36,7 +36,10 @@ if (i < lado - 1) fila += ":";
 ```
 
 ¿Qué observas en este código?
-
+Obserbo dos problemas: 
+1: Uso de concatenación dentro de bucles: Cada vez que se usa fila += ... en un bucle, se crea una nueva cadena (porque los String en Java son inmutables).
+En casos de muchas iteraciones, puede afectar el rendimiento.
+2:Legibilidad del código: Si se omiten las llaves { }, puede causar confusión si se agrega otra instrucción después del if.
 ---
 
 ## Pregunta 4
